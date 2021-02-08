@@ -2,6 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,600;0,800;1,400;1,500;1,700&family=Nanum+Myeongjo:wght@400;700;800&family=Sriracha&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -52,6 +53,10 @@ table {
   border-spacing: 0;
 }
 
+body {
+  font-family: "Fira Sans", sans-serif;
+}
+
 #container-wrapper {
   background: #1f1f5e;
   height: 100vh;
@@ -73,7 +78,9 @@ table {
 #container-wrapper .side h2 {
   color: #fff;
   font-size: 3vw;
-  text-decoration: underline;
+  font-style: italic;
+  font-weight: 200;
+  font-family: "Nanum Myeongjo", serif;
 }
 #container-wrapper .side #side-nav {
   margin-top: 100px;
@@ -108,21 +115,25 @@ table {
   background-position: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
 }
 #container-wrapper .jumbo h1 {
   color: #fff;
   font-size: 4vw;
-  font-weight: normal;
+  font-style: italic;
+  font-weight: 400;
+  font-family: "Nanum Myeongjo", serif;
   letter-spacing: 12px;
   line-height: 1.2;
   text-transform: uppercase;
-  margin-left: 45px;
+  margin-left: 80px;
+  margin-top: 80px;
 }
 
 #mids {
   height: 500px;
   width: 100%;
+  color: #1b1b1b;
   display: flex;
   flex-direction: row;
   padding: 50px;
@@ -159,11 +170,17 @@ table {
 }
 #mids .right-mids h2 {
   font-size: 2vw;
+  font-family: "Nanum Myeongjo", serif;
   margin-bottom: 20px;
+}
+#mids .right-mids p {
+  line-height: 1.8;
+  font-weight: 200;
 }
 #mids .right-mids button {
   margin-top: 70px;
   padding: 3px 15px;
+  font-family: "Nanum Myeongjo", serif;
 }
 
 #atmos {
@@ -185,11 +202,22 @@ table {
 }
 #atmos .left-atmos h2 {
   font-size: 2vw;
+  font-family: "Nanum Myeongjo", serif;
   margin-bottom: 20px;
+}
+#atmos .left-atmos p {
+  line-height: 1.8;
+  font-weight: 200;
+  padding-right: 10px;
 }
 #atmos .left-atmos button {
   margin-top: 70px;
   padding: 3px 15px;
+  font-family: "Nanum Myeongjo", serif;
+  color: #fff;
+  background: #1b1b1b;
+  outline: none;
+  border-color: #fff;
 }
 #atmos .right-atmos {
   margin-left: 150px;

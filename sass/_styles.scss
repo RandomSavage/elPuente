@@ -1,4 +1,10 @@
 @import './reset';
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,600;0,800;1,400;1,500;1,700&family=Nanum+Myeongjo:wght@400;700;800&family=Sriracha&display=swap');
+
+
+body{
+  font-family: 'Fira Sans', sans-serif;
+}
 
 #container-wrapper{
   background: rgb(31, 31, 94);
@@ -19,7 +25,10 @@
     h2{
       color: #fff;
       font-size: 3vw;
-      text-decoration: underline;
+      // text-decoration: underline;
+      font-style: italic;
+      font-weight: 200;
+      font-family: 'Nanum Myeongjo', serif;
     }
     #side-nav{
       margin-top: 100px;
@@ -71,21 +80,26 @@
     background-position: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     h1{
       color: #fff;
       font-size: 4vw;
-      font-weight: normal;
+      font-style: italic;
+      font-weight: 400;
+      font-family: 'Nanum Myeongjo', serif;
       letter-spacing: 12px;
       line-height: 1.2;
       text-transform: uppercase;
-      margin-left: 45px;
+      margin-left: 80px;
+      margin-top: 80px;
     }
   }
 }
 #mids{
   height: 500px;
   width: 100%;
+
+  color: #1b1b1b;
   display: flex;
   flex-direction: row;
   // justify-content: space-between;
@@ -121,11 +135,17 @@
     padding-top: 95px;
     h2{
       font-size: 2vw;
+      font-family: 'Nanum Myeongjo', serif;
       margin-bottom: 20px;
+    }
+    p{
+      line-height: 1.8;
+      font-weight: 200;
     }
     button{
       margin-top: 70px;
       padding: 3px 15px;
+      font-family: 'Nanum Myeongjo', serif;
     }
   }
 }
@@ -146,11 +166,22 @@
     overflow: hidden;
     h2{
       font-size: 2vw;
+      font-family: 'Nanum Myeongjo', serif;
       margin-bottom: 20px;
+    }
+    p{
+      line-height: 1.8;
+      font-weight: 200;
+      padding-right: 10px;
     }
     button{
       margin-top: 70px;
       padding: 3px 15px;
+      font-family: 'Nanum Myeongjo', serif;
+      color: #fff;
+      background: #1b1b1b;
+      outline: none;
+      border-color: #fff;
     }
   }
   .right-atmos{
