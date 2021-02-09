@@ -55,12 +55,13 @@ table {
 
 body {
   font-family: "Fira Sans", sans-serif;
+  overflow-x: hidden;
 }
 
 #container-wrapper {
   background: #1f1f5e;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -116,6 +117,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  position: relative;
 }
 #container-wrapper .jumbo h1 {
   color: #fff;
@@ -128,6 +130,19 @@ body {
   text-transform: uppercase;
   margin-left: 80px;
   margin-top: 80px;
+}
+#container-wrapper .jumbo .nav-toggle {
+  background: transparent;
+  border-color: transparent;
+  font-size: 1.8vw;
+  color: #fff;
+  position: absolute;
+  top: 40px;
+  right: 70px;
+  cursor: pointer;
+}
+#container-wrapper .jumbo .nav-toggle:hover {
+  transform: rotate(90deg);
 }
 
 #mids {
@@ -178,9 +193,11 @@ body {
   font-weight: 200;
 }
 #mids .right-mids button {
-  margin-top: 70px;
+  margin-top: 40px;
   padding: 3px 15px;
   font-family: "Nanum Myeongjo", serif;
+  outline: none;
+  cursor: pointer;
 }
 
 #atmos {
@@ -218,6 +235,7 @@ body {
   background: #1b1b1b;
   outline: none;
   border-color: #fff;
+  cursor: pointer;
 }
 #atmos .right-atmos {
   margin-left: 150px;
@@ -249,4 +267,230 @@ body {
   position: absolute;
   top: -100px;
   left: 100px;
+}
+
+@media only screen and (max-width: 767px) {
+  #container-wrapper {
+    background: #1f1f5e;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    overflow-x: hidden;
+  }
+  #container-wrapper .side {
+    width: 0%;
+    background: #1b1b1b;
+    border-right: 2px solid #d6d2d2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+    text-align: center;
+    transform: translate(-100%);
+    display: none;
+  }
+  #container-wrapper .side h2 {
+    color: #fff;
+    font-size: 3vw;
+    font-style: italic;
+    font-weight: 200;
+    font-family: "Nanum Myeongjo", serif;
+  }
+  #container-wrapper .side #side-nav {
+    margin-top: 100px;
+  }
+  #container-wrapper .side #side-nav a {
+    text-decoration: none;
+    color: #fff;
+  }
+  #container-wrapper .side #side-nav #mainNav ul li {
+    padding-top: 30px;
+  }
+  #container-wrapper .side #side-nav #mainNav .sub-menu ul {
+    display: none;
+    transition: all 3s ease-in-out;
+  }
+  #container-wrapper .side #side-nav #mainNav .sub-menu ul li a {
+    padding-top: 30px;
+  }
+  #container-wrapper .side #social {
+    margin-top: 200px;
+  }
+  #container-wrapper .side #social a i {
+    font-size: 1.5vw;
+    padding: 8px;
+  }
+  #container-wrapper .jumbo {
+    height: 100%;
+    width: 100vw;
+    background: url("../../public/shine.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    transform: translate(0%);
+  }
+  #container-wrapper .jumbo h1 {
+    color: #fff;
+    font-size: 8vw;
+    font-style: italic;
+    font-weight: 400;
+    font-family: "Nanum Myeongjo", serif;
+    letter-spacing: 12px;
+    line-height: 1.8;
+    text-transform: uppercase;
+    margin-left: 80px;
+    margin-top: 80px;
+  }
+  #container-wrapper .jumbo .nav-toggle {
+    background: transparent;
+    border-color: transparent;
+    font-size: 5vw;
+    color: #fff;
+    position: absolute;
+    top: 40px;
+    right: 70px;
+    cursor: pointer;
+  }
+  #container-wrapper .jumbo .nav-toggle:hover {
+    transform: rotate(90deg);
+  }
+
+  #mids {
+    height: 100%;
+    width: 100%;
+    color: #1b1b1b;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 50px 0;
+    position: relative;
+  }
+  #mids .left-mids {
+    margin-right: 0px;
+    border-right: 2px solid #d6d2d2;
+  }
+  #mids .left-mids .long {
+    height: 200px;
+    width: 400px;
+    background: url("../../public/shine.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  #mids .left-mids .short {
+    height: 180px;
+    width: 200px;
+    background: url("../../public/shine.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    z-index: 2;
+    top: 280px;
+    left: 25%;
+  }
+  #mids .right-mids {
+    width: 75%;
+    overflow: hidden;
+    margin: 180px auto 50px;
+  }
+  #mids .right-mids h2 {
+    font-size: 5vw;
+    font-family: "Nanum Myeongjo", serif;
+    margin-bottom: 20px;
+  }
+  #mids .right-mids p {
+    line-height: 1.8;
+    font-weight: 200;
+  }
+  #mids .right-mids button {
+    margin-top: 70px;
+    padding: 3px 15px;
+    font-family: "Nanum Myeongjo", serif;
+    outline: none;
+    cursor: pointer;
+  }
+
+  #atmos {
+    height: 100vh;
+    width: 100%;
+    color: #fff;
+    background: #1b1b1b;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 50px 0;
+    position: relative;
+    margin-bottom: 20px;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  #atmos .left-atmos {
+    border-right: 2px solid #d6d2d2;
+    width: 75%;
+    margin: 50px auto 50px;
+  }
+  #atmos .left-atmos h2 {
+    font-size: 5vw;
+    font-family: "Nanum Myeongjo", serif;
+    margin-bottom: 20px;
+  }
+  #atmos .left-atmos p {
+    line-height: 1.8;
+    font-weight: 200;
+    padding-right: 10px;
+  }
+  #atmos .left-atmos button {
+    margin-top: 70px;
+    padding: 3px 15px;
+    font-family: "Nanum Myeongjo", serif;
+    color: #fff;
+    background: #1b1b1b;
+    outline: none;
+    border-color: #fff;
+    cursor: pointer;
+  }
+  #atmos .right-atmos {
+    height: 100vh;
+    width: 100%;
+    margin: 0px 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  #atmos .right-atmos .stub {
+    height: 220px;
+    width: 200px;
+    background: url("../../public/shine.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    z-index: 2;
+    top: 20px;
+    left: 50px;
+    margin-bottom: 50px;
+  }
+  #atmos .right-atmos .tower {
+    height: 200px;
+    width: 300px;
+    background: url("../../public/shine.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background: url("../../public/shine.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 180px;
+    left: 50px;
+    margin-bottom: 50px;
+  }
 }
